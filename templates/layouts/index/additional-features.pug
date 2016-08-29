@@ -1,0 +1,26 @@
+include ../../mixins/module.pug
+include ../../mixins/list.pug
+
+// Additional Features
++modulesection("Services")(class="wow fadeInDown", id='services')
+  .row
+
+    .col-md-6
+
+      +piccardhead('#', '/img/col/city/img%20(12).jpg')(class='wow fadeIn')
+        +listgroup()
+          +checklistitem("Full stack development")
+          +checklistitem("Mobile development")
+          +checklistitem("Web development")
+          +checklistitem("Backend development")
+          +checklistitem("Database development")
+
+    .col-md-6
+
+      +piccardhead('#', '/img/col/city/img%20(14).jpg')(class='wow fadeIn', data-wow-delay='0.3s')
+        +listgroup()
+          +checklistitem("Continuous integration")
+          +checklistitem("Scalable hosting")
+          +checklistitem("Cloud services")
+          +checklistitem("Domain management")
+          +checklistitem("Full integrations")

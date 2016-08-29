@@ -1,0 +1,66 @@
+mixin carouselhead(id)
+  .carousel.slide(id=id, data-ride='carousel')&attributes(attributes)
+    block
+
+mixin setupindicators()
+  ol.carousel-indicators()&attributes(attributes)
+    block
+
+mixin indicator(id, count)
+  - var selector = '#'+id
+  if count > 0
+    li(data-target=selector, data-slide-to=count)&attributes(attributes)
+  else
+    li.active(data-target=selector, data-slide-to=count)&attributes(attributes)
+
+mixin slides()
+  .carousel-inner(role='listbox')
+    block
+
+mixin slide()
+  .carousel-item()&attributes(attributes)
+    block
+
+mixin caption(title)
+  .carousel-caption
+    h3= title
+    block
+
+mixin controls(id)
+  - var selector = '#'+id
+  a.left.carousel-control(href=selector, role='button', data-slide='prev')
+    span.icon-prev(aria-hidden='true')
+    span.sr-only Previous
+  a.right.carousel-control(href=selector, role='button', data-slide='next')
+    span.icon-next(aria-hidden='true')
+    span.sr-only Next
+
+mixin topcontrols(id)
+  - var selector = '#'+id
+  .controls-top
+    a.btn-floating.btn-small.mdb-color(href=selector, role='button', data-slide='prev')
+      i.fa.fa-chevron-left
+    a.btn-floating.btn-small.mdb-color(href=selector, role='button', data-slide='next')
+      i.fa.fa-chevron-right
+
+
+mixin slider(id, count)
+  +carouselhead(id)(class="wow fadeIn")
+    +setupindicators()
+      - var n = 0
+      while n < count
+        +indicator(id, n++)
+    +slides()
+      block
+    +controls(id)
+
+mixin slidertopcontrol(id, count)
+  +carouselhead(id)(class="wow fadeIn")
+    +topcontrols(id)
+    +setupindicators()
+      - var n = 0
+      while n < count
+        +indicator(id, n++)
+    +slides()
+      block
+

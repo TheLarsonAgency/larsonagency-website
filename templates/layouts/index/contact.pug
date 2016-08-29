@@ -1,0 +1,26 @@
+include ../../mixins/module.pug
+include ../../mixins/card.pug
+
+// Main Container
++modulesection("Contact Us")(id="contact")
+  .row
+    .col-md-8
+      #map-container.z-depth-1.wow.fadeInUp(style='height: 300px')
+
+    .col-md-4
+      ul.text-xs-center
+        li.wow.fadeInUp(data-wow-delay='0.2s')
+          a.btn-floating.btn-small.mdb-color
+            i.fa.fa-map-marker
+          p Denver, CO 80206, USA
+
+        //-
+          li.wow.fadeInUp(data-wow-delay='0.3s')
+            a.btn-floating.btn-small.mdb-color(data-toggle='modal', data-targets='#contact-form')
+            i.fa.fa-phone
+            p + 01 234 567 89
+
+        li.wow.fadeInUp(data-wow-delay='0.4s')
+          a.btn-floating.btn-small.mdb-color(data-toggle='modal', data-targets='#contact-form')
+            i.fa.fa-envelope
+          p info@mindhive.tech

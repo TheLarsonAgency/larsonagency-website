@@ -1,0 +1,30 @@
+include ../../mixins/module.pug
+include ../../mixins/paragraph.pug
+include ../../mixins/carousel.pug
+
+// Examples of Use
++modulesection("Examples of Use")(class="wow fadeInDown")
+  .row
+
+    .col-md-5.wow.fadeIn
+      +paragraph("Why is it so great?")
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus modi sint accusantium earum, quisquam dolore odit cumque magnam temporibus blanditiis, nostrum voluptas perfer endis, iusto repellendus error corporis ex totam voluptatem.
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus modi sint accus antium earum, quisquam dolore odit cumque magnam temporibus blanditiis, nostrum voluptas perfer endis, iusto repellendus error corporis ex totam voluptatem.
+
+    .col-md-7
+      +slider('ex2', 3)(class="carousel-fade wow fadeIn")
+        +slide()(class='active')
+          img(src='http://mdbootstrap.com/images/regular/city/img%20(3).jpg')
+          +caption("Heading")
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        +slide()
+          img(src='http://mdbootstrap.com/images/regular/city/img%20(7).jpg')
+          +caption("Heading")
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        +slide()
+          img(src='http://mdbootstrap.com/images/regular/city/img%20(13).jpg')
+          +caption("Heading")
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+

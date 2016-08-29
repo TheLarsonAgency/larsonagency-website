@@ -1,0 +1,26 @@
+extends ./includes/layout.jade
+
+append sitestyle
+  style.
+    #main-header:after {
+      background: url(images/HeaderBanner.png) repeat center center;
+    }
+    #summary:after {
+      background: url(images/Collage64-banner.png) repeat center center;
+    }
+    // Slider Images
+    #slide1:after {
+      background: url(images/slide1.jpg) repeat center center;
+    }
+    #slide2:after {
+      background: url(images/slide2.jpg) repeat center center;
+    }
+    #slide3:after {
+      background: url(images/slide3.jpg) repeat center center;
+    }
+    #slide4:after {
+      background: url(images/slide4.jpg) repeat center center;
+    }
+
+block content
+  include ./layouts/index/index.pug

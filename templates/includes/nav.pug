@@ -1,0 +1,29 @@
+nav.navbar.navbar-dark.elegant-color.wow.fadeIn(data-wow-delay='1.0s')
+
+  // Collapse Button
+  button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#collapseEx2')
+    i.fa.fa-bars
+
+  .container
+    .collapse.navbar-toggleable-xs#collapseEx2
+      // Navbar Brand
+      a.navbar-brand(href='/') MindHive
+
+      // Links
+      ul.nav.navbar-nav
+
+        li.nav-item
+          a.nav-link(href='/') Home
+
+        li.nav-item
+          a.nav-link(href='/about') About
+
+        li.nav-item
+          a.nav-link(href='/contact') Contact
+
+
+  script.
+    $(function() {
+      $('nav a[href="' + location.pathname + '"]').addClass('active');
+    });
+

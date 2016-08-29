@@ -1,0 +1,17 @@
+mixin listgroup()
+  ul.list-group()&attributes(attributes)
+    block
+
+mixin basiclistitem()
+  li.list-group-item()&attributes(attributes)
+    block
+
+mixin listicon()
+  i.fa()&attributes(attributes)
+    block
+
+mixin checklistitem(text)
+  +basiclistitem()
+    +listicon()(class="fa-check pull-xs-right")
+    = text
+

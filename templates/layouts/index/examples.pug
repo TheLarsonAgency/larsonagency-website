@@ -1,0 +1,32 @@
+include ../../mixins/module.pug
+include ../../mixins/paragraph.pug
+include ../../mixins/carousel.pug
+
+// Examples of Use
++modulesection("What We Do")(class="wow fadeInDown")
+  .row
+
+    .col-md-5.wow.fadeIn
+      +lightparagraph("Our Commitment")
+        p
+          | We match a suitable developer to your project and relieve you of the complexities of qualifying and communicating by acting as a leveraged interface between you and developers.
+        p
+          | Upon completion of a project, we assess what they've accomplished and the quality of their work, ensuring that you are receiving the best service.
+        p
+          | We don't just build your application, we can host it too.  Ask us about our modern scalable infrastructure that allows us to deliver scalability and solid services at a fraction of the cost to you.
+
+    .col-md-7
+      +slider('ex2', 3)(class="carousel-fade wow fadeIn")
+        +slide()(class='active')
+          img(src='/img/col/city/img%20(3).jpg')
+          +caption("Get Results")
+            p Let us seek out and find the greatest talent so that you don't have to.
+        +slide()
+          img(src='/img/col/city/img%20(7).jpg')
+          +caption("Leave it to us")
+            p When the work is completed, we validate that the developer has created exactly what you're looking for.
+        +slide()
+          img(src='/img/col/city/img%20(13).jpg')
+          +caption("Scale Your Application")
+            p We can host your application, easily integrating it with all of your future projects.
+

@@ -1,0 +1,26 @@
+include ../../mixins/module.pug
+include ../../mixins/list.pug
+
+// Additional Features
++modulesection("Additional Features")(class="wow fadeInDown")
+  .row
+
+    .col-md-6
+
+      +piccardhead('#', 'http://mdbootstrap.com/images/regular/city/img%20(12).jpg')(class='wow fadeIn')
+        +listgroup()
+          +checklistitem("Cras justo odio")
+          +checklistitem("Dapibus ac facilisis in")
+          +checklistitem("Morbi leo risus")
+          +checklistitem("Cras justo odio")
+          +checklistitem("Dapibus ac facilisis in")
+
+    .col-md-6
+
+      +piccardhead('#', 'http://mdbootstrap.com/images/regular/city/img%20(14).jpg')(class='wow fadeIn', data-wow-delay='0.3s')
+        +listgroup()
+          +checklistitem("Cras justo odio")
+          +checklistitem("Dapibus ac facilisis in")
+          +checklistitem("Morbi leo risus")
+          +checklistitem("Cras justo odio")
+          +checklistitem("Dapibus ac facilisis in")

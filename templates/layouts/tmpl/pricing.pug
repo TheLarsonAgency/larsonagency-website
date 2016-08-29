@@ -1,0 +1,81 @@
+include ../../mixins/module.pug
+include ../../mixins/card.pug
+
+// Main Container
++modulesection("Pricing")(class="wow fadeInDown", id="pricing")
+  .row
+    .col-md-4
+      +pricecard('Basic', '10', 'blue')(class="wow fadeInUp")
+        ul
+          li
+            p
+              i.fa.fa-check
+              | Feature name
+          li
+            p
+              i.fa.fa-check
+              | Feature name
+          li
+            p
+              i.fa.fa-times
+              | Feature name
+          li
+            p
+              i.fa.fa-times
+              | Feature name
+          li
+            p
+              i.fa.fa-times
+              | Feature name
+        button.btn.btn-primary Buy now
+
+    .col-md-4
+      +pricecard('Pro', '20', 'indigo')(class="wow fadeInUp", data-wow-delay='0.2s')
+        ul
+          li
+            p
+              i.fa.fa-check
+              | Feature name
+          li
+            p
+              i.fa.fa-check
+              | Feature name
+          li
+            p
+              i.fa.fa-check
+              | Feature name
+          li
+            p
+              i.fa.fa-times
+              | Feature name
+          li
+            p
+              i.fa.fa-times
+              | Feature name
+        button.btn.btn-primary Buy now
+
+    .col-md-4
+      +pricecard('Enterprise', '30', 'deep-purple')(class="wow fadeInUp", data-wow-delay='0.4s')
+        ul
+          li
+            p
+              i.fa.fa-check
+              | Feature name
+          li
+            p
+              i.fa.fa-check
+              | Feature name
+          li
+            p
+              i.fa.fa-check
+              | Feature name
+          li
+            p
+              i.fa.fa-check
+              | Feature name
+          li
+            p
+              i.fa.fa-check
+              | Feature name
+        button.btn.btn-primary Buy now
+

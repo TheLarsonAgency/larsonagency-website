@@ -1,0 +1,26 @@
+include ../../mixins/paragraph.pug
+include ../../mixins/card.pug
+include ../../mixins/form.pug
+
+// Full Pic Background
+.view.hm-black-strong
+  .full-bg-img.flex-center
+
+    .container
+      #home.row
+
+        // First column
+        .col-lg-6
+          .description
+            +paragraph("Landing Page")(class="wow fadeInLeft")
+              p.wow.fadeInLeft(data-wow-delay='0.4s')
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae, quisquam iste, maiores. Nulla.
+              br
+              a.btn.btn-ptc.wow.fadeInLeft(data-wow-delay='0.7s') Learn more
+
+        // Second column
+        .col-lg-6
+          // Form
+          +basiccard()(class="wow fadeInRight")
+            // Body
+            +subscribe()

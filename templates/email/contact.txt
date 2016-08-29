@@ -1,0 +1,21 @@
+Hello %first%,
+
+
+Thank you for your interest in our work!
+
+Our team has received your request, and will be contacting you regarding your next big idea.
+
+
+In the meantime, you can sit back and enjoy thinking about the extra time that you will have once we match you with one of our developers.
+
+
+Cheers!
+
+The MindHive Team 
+
+This email was sent by:
+    MindHive LLC
+    700 N Colorado Blvd. #693
+    Denver, CO 80206 
+
+For more information, check out our website or contact us at: info@mindhive.tech

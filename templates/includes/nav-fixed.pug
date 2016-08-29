@@ -1,0 +1,66 @@
+nav.navbar.navbar-dark.elegant-color.navbar-fixed-top.scrolling-navbar.wow.fadeIn(data-wow-delay='1.0s')
+
+  // Collapse Button
+  button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#collapseEx')
+    i.fa.fa-bars
+
+  .container
+    #collapseEx.collapse.navbar-toggleable-xs
+      // Navbar Brand
+      a.navbar-brand(href='/') MindHive
+
+      // Links
+      ul.nav.navbar-nav.smooth-scroll
+
+        li.nav-item
+          a.nav-link.active(href='#home')
+            | Home 
+            span.sr-only (current)
+
+        li.nav-item
+          a.nav-link(href='#about') About
+        li.nav-item
+          a.nav-link(href='#services') Services
+        li.nav-item
+          a.nav-link(href='#home') Contact
+
+      //-
+        form.form-inline
+          a.btn.btn-warning(type='button', data-toggle='modal', data-target='#contact-form', href='#home') Get a free quote
+
+      //-
+        button.btn.btn-warning(type='button', data-toggle='modal', data-target='#contact-form', href='#home') Get a free quote
+        #contact-form.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ContactLabel', aria-hidden='true')
+          .modal-dialog.modal-lg(role='document')
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                  span(aria-hidden='true') &times;
+                h4.modal-title#ContactLabel Let's get started
+              .modal-body.container-fluid
+
+                form#contactFormModal
+
+                  .md-form
+                    i.fa.fa-user.prefix
+                    input#first.form-control(type='text', name='first')
+                    label.lead(for='firstname') First name
+
+                  .md-form
+                    i.fa.fa-user.prefix
+                    input#last.form-control(type='text', name='last')
+                    label.lead(for='lastname') Last name
+
+                  .md-form
+                    i.fa.fa-envelope.prefix
+                    input#email.form-control(type='text', name='email')
+                    label.lead(for='email') Email
+
+                  .md-form
+                    i.fa.fa-lightbulb-o.prefix
+                    input#msg.form-control.md-textarea(type='text', name='msg')
+                    label.lead(for='msg') Your idea in a few words...
+
+                  .text-xs-center
+                    button.btn.btn-warning.btn-lg(type='button', data-toggle='modal', data-target='#contact', onclick='goog_report_conversion(window.location.href)') Get a free quote
+

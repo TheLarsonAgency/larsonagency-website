@@ -1,0 +1,180 @@
+footer.page-footer.elegant-color.center-on-small-only
+  // Foot Links
+  .container-fluid
+    .row
+      .col-md-3.col-md-offset-1
+        h5.title MindHive LLC
+        p Bringing talent to the masses.
+        //- p Material Design (codenamed Quantum Paper) is a design language developed by Google.
+        //- p Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS, and JS framework - Bootstrap.
+
+      hr.hidden-md-up
+      .col-md-2.col-md-offset-1
+        //-
+          h5.title First column
+          ul
+            li
+              a(href='#!') Link 1
+            li
+              a(href='#!') Link 2
+            li
+              a(href='#!') Link 3
+            li
+              a(href='#!') Link 4
+
+      //-
+        hr.hidden-md-up
+        .col-md-2
+          h5.title Second column
+          ul
+            li
+              a(href='#!') Link 1
+            li
+              a(href='#!') Link 2
+            li
+              a(href='#!') Link 3
+            li
+              a(href='#!') Link 4
+
+        hr.hidden-md-up
+        .col-md-2
+          h5.title Third column
+          ul
+            li
+              a(href='#!') Link 1
+            li
+              a(href='#!') Link 2
+            li
+              a(href='#!') Link 3
+            li
+              a(href='#!') Link 4
+
+  hr
+  .call-to-action
+    h4 MindHive LLC
+    ul
+      li
+        h5 Contact us today
+      li
+        a.btn.btn-danger(href='#home') Contact us!
+        a.btn.btn-default(href='#about') Learn more
+
+  .footer-copyright
+    .container-fluid
+      | ©
+      span#copyyear 2016
+      |  Copyright:
+      a(href="http://mindhive.tech")  MindHive LLC
+
+  block footscripts
+    script(src='js/tether.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/mdb.min.js')
+    //- script(src='js/app.min.js')
+
+    //-
+      // Google Maps
+      script(src='http://maps.google.com/maps/api/js')
+      script.
+        function init_map() {
+          var var_location =
+                  new google.maps.LatLng(40.725118, -73.997699);
+
+          var var_mapoptions = {
+            center: var_location,
+            zoom: 14
+          };
+
+          var var_marker = new google.maps.Marker({
+            position: var_location,
+            map: var_map,
+            title: "New York"
+          });
+
+          var var_map =
+              new google.maps.Map(
+                  document.getElementById("map-container"),
+                  var_mapoptions
+                );
+
+          var_marker.setMap(var_map);
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);
+
+    // Animations init
+    script.
+      new WOW().init();
+
+    // Highlight nav link on current page
+    script.
+      $(function () {
+        $('nav a[href="' + location.pathname + '"]').addClass('active');
+      });
+
+    // Copyright Script
+    script.
+      $(document).ready(function () {
+        var curYear = (new Date().getFullYear());
+        var tag = $('#copyyear').innerHTML;
+        if (tag < curYear) {
+          tag.innerHTML = tag+"-"+curYear;
+        }
+      });
+
+    // Google Analytics
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-78698882-1', 'auto');
+      ga('send', 'pageview');
+
+    // Google Code for Remarketing Tag
+    //-
+      ------------------------------------------------
+      Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+      -------------------------------------------------
+    script(type='text/javascript').
+      /* <![CDATA[ */
+      var google_conversion_id = 880642128;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+    script(type='text/javascript', src='//www.googleadservices.com/pagead/conversion.js')
+    noscript
+      div(style='display:inline;')
+        img(height='1', width='1', style='border-style:none;', alt='', src='//googleads.g.doubleclick.net/pagead/viewthroughconversion/880642128/?value=0&guid=ON&script=0')
+
+    // Google AdWords Conversion Tracking
+    //-
+      Google Code for My Conversions Conversion Page
+      In your html page, add the snippet and call
+      goog_report_conversion when someone clicks on the
+      chosen link or button.
+    script(type='text/javascript').
+      /* <![CDATA[ */
+      goog_snippet_vars = function() {
+        var w = window;
+        w.google_conversion_id = 880642128;
+        w.google_conversion_label = "w7pWCNDXtmcQ0JD2owM";
+        w.google_remarketing_only = false;
+      }
+      // DO NOT CHANGE THE CODE BELOW.
+      goog_report_conversion = function(url) {
+        goog_snippet_vars();
+        window.google_conversion_format = "3";
+        var opt = new Object();
+        opt.onload_callback = function() {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        }
+        var conv_handler = window['google_trackConversion'];
+        if (typeof(conv_handler) == 'function') {
+          conv_handler(opt);
+        }
+      }
+      /* ]]> */
+    script(type='text/javascript', src='//www.googleadservices.com/pagead/conversion_async.js')
+

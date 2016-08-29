@@ -1,0 +1,134 @@
+mixin subscribeform()
+  // Header
+
+  .text-xs-center
+    //- h3 Contact us:
+    h3.display-4 Let's start
+    h3
+      small.text-muted a new project together
+
+  hr
+
+  // Body
+  form()&attributes(attributes)
+
+    .md-form
+      i.fa.fa-user.prefix
+      input#firstname.form-control(type='text')
+      label.lead(for='firstname') First name
+
+    .md-form
+      i.fa.fa-user.prefix
+      input#lastname.form-control(type='text')
+      label.lead(for='lastname') Last name
+
+    .md-form
+      i.fa.fa-envelope.prefix
+      input#email.form-control(type='text')
+      label.lead(for='email') Email
+
+    //-
+      .md-form
+        i.fa.fa-telephone.prefix
+        input#phone.form-control(type='text')
+        label(for='phone') Phone number
+
+      .md-form
+        i.fa.fa-lock.prefix
+        input#password.form-control(type='password')
+        label(for='password') Repeat password
+    .text-xs-center
+      button.btn.btn-warning.btn-lg Get a free quote
+    //-
+      hr
+      fieldset.form-group
+        input#checkbox1(type='checkbox')
+        label(for='checkbox1') Subscribe me to the newsletter
+
+mixin contactform()
+  // Header
+
+  .text-xs-center
+    //- h3 Contact us:
+    h3.display-4 Let's start
+    h3
+      small.text-muted a new project together
+
+  hr
+
+  // Body
+  form#contactForm()&attributes(attributes)
+
+    .md-form
+      i.fa.fa-user.prefix
+      input#first.form-control(type='text', name='first')
+      label.lead(for='firstname') First name
+
+    .md-form
+      i.fa.fa-user.prefix
+      input#last.form-control(type='text', name='last')
+      label.lead(for='lastname') Last name
+
+    .md-form
+      i.fa.fa-envelope.prefix
+      input#email.form-control(type='text', name='email')
+      label.lead(for='email') Email
+
+    .md-form
+      i.fa.fa-lightbulb-o.prefix
+      input#msg.form-control.md-textarea(type='text', name='msg')
+      label.lead(for='msg') Your idea in a few words...
+
+    .text-xs-center
+      button.btn.btn-warning.btn-lg(type='button', data-toggle='modal', data-target='#contact', onclick="goog_report_conversion(window.location.href)") Get a free quote
+
+    #contact.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ContactLabel', aria-hidden='true')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') &times;
+            h4.modal-title#ContactLabel Thanks for reaching out!
+          .modal-body
+            p Your information has been forwarded on to our team.  Someone will be contacting you shortly.
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+
+    script.
+      $('#contact').on('shown.bs.modal', function () {
+        $.ajax({
+          url:'/api/contact',
+          type:'post',
+          data:$('#contactForm').serialize(),
+          success:function(){
+            console.log("Success");
+          }
+        });
+      });
+
+
+mixin socialbutton(link)
+  a.btn-floating(href=link)&attributes(attributes)
+    block
+
+mixin socialicon()
+  i.fa()&attributes(attributes)
+    block
+
+mixin socialbuttons()
+  .text-xs-center
+    h3
+      +socialicon()(class="fa-user")
+      |  Register with:
+    +socialbutton('')(class="btn-fb btn-small")
+      +socialicon()(class="fa-facebook")
+    +socialbutton('')(class="btn-tw btn-small")
+      +socialicon()(class="fa-twitter")
+    +socialbutton('')(class="btn-gplus btn-small")
+      +socialicon()(class="fa-google-plus")
+    +socialbutton('')(class="btn-li btn-small")
+      +socialicon()(class="fa-linkedin")
+    +socialbutton('')(class="btn-git btn-small")
+      +socialicon()(class="fa-github")
+    block
+

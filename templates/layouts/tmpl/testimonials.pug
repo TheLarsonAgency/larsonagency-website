@@ -1,0 +1,67 @@
+include ../../mixins/module.pug
+include ../../mixins/paragraph.pug
+include ../../mixins/carousel.pug
+include ../../mixins/card.pug
+
+// Examples of Use
++modulesection("Examples of Use")(class="wow fadeInDown")
+  .row
+
+    +slidertopcontrol('ex3', 3)(class="carousel-multi-item wow fadeIn")
+      +slide()(class='active')
+        .col-md-4
+          +avatarcard('Anna Doe', 'http://mdbootstrap.com/wp-content/uploads/2015/10/avatar-1.jpg')(class='green lighten-1')
+            p
+              i.fa.fa-quote-left
+              |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci
+
+        .col-md-4
+          +avatarcard('Anna Doe', 'http://mdbootstrap.com/wp-content/uploads/2015/10/avatar-2.jpg')(class='green darken-2')
+            p
+              i.fa.fa-quote-left
+              |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci
+
+        .col-md-4
+          +avatarcard('Anna Doe', 'http://mdbootstrap.com/wp-content/uploads/2015/10/avatar-3.jpg')(class='green darken-4')
+            p
+              i.fa.fa-quote-left
+              |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci
+
+      +slide()
+        .col-md-4
+          +avatarcard('Anna Doe', 'http://mdbootstrap.com/wp-content/uploads/2015/10/team-avatar-1.jpg')(class='blue lighten-1')
+            p
+              i.fa.fa-quote-left
+              |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci
+
+        .col-md-4
+          +avatarcard('Anna Doe', 'http://mdbootstrap.com/wp-content/uploads/2015/10/team-avatar-2.jpg')(class='blue darken-2')
+            p
+              i.fa.fa-quote-left
+              |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci
+
+        .col-md-4
+          +avatarcard('Anna Doe', 'http://mdbootstrap.com/wp-content/uploads/2015/10/team-avatar-3.jpg')(class='blue darken-4')
+            p
+              i.fa.fa-quote-left
+              |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci
+
+      +slide()
+        .col-md-4
+          +avatarcard('Anna Doe', 'http://mdbootstrap.com/wp-content/uploads/2015/10/avatar-3.jpg')(class='indigo lighten-1')
+            p
+              i.fa.fa-quote-left
+              |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci
+
+        .col-md-4
+          +avatarcard('Anna Doe', 'http://mdbootstrap.com/wp-content/uploads/2015/10/team-avatar-1.jpg')(class='indigo darken-2')
+            p
+              i.fa.fa-quote-left
+              |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci
+
+        .col-md-4
+          +avatarcard('Anna Doe', 'http://mdbootstrap.com/wp-content/uploads/2015/10/team-avatar-2.jpg')(class='indigo darken-4')
+            p
+              i.fa.fa-quote-left
+              |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci
+

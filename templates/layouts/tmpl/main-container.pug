@@ -1,0 +1,18 @@
+include ../../mixins/module.pug
+include ../../mixins/card.pug
+
+// Main Container
++modulesection("Best Features")(class="wow fadeInDown", id="best-features")
+  .row
+    .col-md-4
+      +piccard("Card Title", '#', 'http://mdbootstrap.com/images/regular/city/img%20(2).jpg')(class="wow fadeInUp")
+        p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+
+    .col-md-4
+      +piccard("Card Title", '#', 'http://mdbootstrap.com/images/regular/city/img%20(4).jpg')(class="wow fadeInUp", data-wow-delay='0.2s')
+        p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+
+    .col-md-4
+      +piccard("Card Title", '#', 'http://mdbootstrap.com/images/regular/city/img%20(8).jpg')(class="wow fadeInUp", data-wow-delay='0.4s')
+        p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+

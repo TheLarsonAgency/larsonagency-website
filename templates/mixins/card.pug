@@ -1,0 +1,42 @@
+mixin basiccard()
+  .card()&attributes(attributes)
+    .card-block
+      block
+
+mixin piccardhead(link, image)
+  .card(class=attributes.class)
+    .view.overlay.hm-white-slight
+      img.img-fluid(src=image)
+      a(href=link)
+        .mask
+    block
+
+mixin piccardbody(title)
+  .card-block
+    h4.card-title= title
+    unless attributes.nosplit
+      hr
+    block
+
+mixin piccard(title, link, image)
+  +piccardhead(link, image)
+    +piccardbody(title)
+      block
+
+mixin avatarcard(name, image)
+  .card.testimonial-card
+    .card-up()&attributes(attributes)
+    .avatar
+      img.img-circle.img-responsive(src=image)
+    +piccardbody(name)
+      block
+
+mixin pricecard(plan, price, colors)
+  .card.pricing-card()&attributes(attributes)
+    .price(class=colors)
+      h1= price
+      .version
+        h5= plan
+    .card-block
+      block
+

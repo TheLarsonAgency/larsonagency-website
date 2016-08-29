@@ -1,0 +1,209 @@
+doctype html
+html(lang='en')
+  head
+    // Basics
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1', shrink-to-fit='no')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title MindHive | Software Talent Services
+    // Meta
+    meta(name='description', content='MindHive')
+    meta(name='author', content='MindHive LLC')
+    meta(name='keywords', content='softwawre development, software developers, software developer, software development company, software development services, custom software development, software engineer, webdesign, web designer, programmer, web designing, web designers, software company, programer, programmers, software companies, software development companies')
+    link(href='//netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.css', rel='stylesheet')
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/mdb.min.css', rel='stylesheet')
+    link(href='css/style.css', rel='stylesheet')
+    link(rel='shortcut icon', href='assets/ico/favicon.ico')
+    link(rel='apple-touch-icon', href='touch-icon-iphone.png')
+    link(rel='apple-touch-icon', href='touch-icon-ipad.png', size='76x76')
+    link(rel='apple-touch-icon', href='touch-icon-iphone-retina.png', size='120x120')
+    link(rel='apple-touch-icon', href='touch-icon-ipad-retina.png', size='152x152')
+    script(src='js/jquery-2.2.3.min.js')
+  body
+    nav.navbar.navbar-dark.elegant-color.navbar-fixed-top.scrolling-navbar
+      // Collapse Button
+      button.navbar-toggler.hidden-sm-up(type='button', data-toggle='collapse', data-target='#collapseEx')
+        i.fa.fa-bars
+      .container
+        #collapseEx.collapse.navbar-toggleable-xs
+          // Navbar Brand
+          a.navbar-brand(href='/') MindHive
+          // Links
+          ul.nav.navbar-nav.smooth-scroll
+            li.nav-item
+              a.nav-link(href='#home')
+                | Home 
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='#best-features') Features
+            li.nav-item
+              a.nav-link(href='#examples-of-use') Examples
+            li.nav-item
+              a.nav-link(href='#testimonials') Testimonials
+            li.nav-item
+              a.nav-link(href='#pricing') Pricing
+            li.nav-item
+              a.nav-link(href='#contact') Contact
+      script.
+        $(function() {
+        $('nav a[href="' + location.pathname + '"]').addClass('active');
+        });
+    // Full Pic Background
+    .view.hm-black-strong
+      .full-bg-img.flex-center
+        .container
+          #home.row
+            // First column
+            .col-lg-6
+              .description
+                h2.h2-responsive.wow.animated.fadeInLeft Landing Page
+                hr.hr-dark
+                p.wow.animated.fadeInLeft(data-wow-delay='0.4s')
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae, quisquam iste, maiores. Nulla.
+                br
+                a.btn.btn-ptc.wow.animated.fadeInLeft(data-wow-delay='0.7s') Learn more
+            // Second column
+            .col-lg-6
+              // Form
+              .card.wow.animated.fadeInRight
+                .card-block
+                  // Body
+                  // Header
+                  .text-xs-center
+                    h3
+                      i.fa.fa-user
+                      |  Register with:
+                    a.btn-floating.btn-fb.btn-small(href='')
+                      i.fa.fa-facebook
+                    a.btn-floating.btn-tw.btn-small(href='')
+                      i.fa.fa-twitter
+                    a.btn-floating.btn-gplus.btn-small(href='')
+                      i.fa.fa-google-plus
+                    a.btn-floating.btn-li.btn-small(href='')
+                      i.fa.fa-linkedin
+                    a.btn-floating.btn-git.btn-small(href='')
+                      i.fa.fa-github
+                    hr
+                    h3 or:
+                  // Body
+                  .md-form
+                    i.fa.fa-envelope.prefix
+                    input#email.form-control(type='text')
+                    label(for='email') Your email
+                  .md-form
+                    i.fa.fa-lock.prefix
+                    input#password.form-control(type='password')
+                    label(for='password') Repeat password
+                  .text-xs-center
+                    button.btn.btn-ptc.btn-lg Sign up
+                    hr
+                    fieldset.form-group
+                      input#checkbox1(type='checkbox')
+                      label(for='checkbox1') Subscribe me to the newsletter
+    // Main Container
+    .container
+      .divider-new
+        h2.h2-responsive.wow.animated.fadeInDown Best Features
+      section#best-features
+        .row
+          .col-md-4
+            .card.wow.animated.fadeInUp
+              // Image
+              .view.overlay.hm-white-slight
+                img.img-fluid(src='http://mdbootstrap.com/images/regular/city/img%20(2).jpg')
+                a(href='#')
+                  .mask
+              // Title
+              .card-block
+                h4.card-title Card Title
+                hr
+                // Body
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+            style.
+              .view.overlay {
+              overflow: auto;
+              }
+          .col-md-4
+            .card.wow.animated.fadeInUp
+              // Image
+              .view.overlay.hm-white-slight
+                img.img-fluid(src='http://mdbootstrap.com/images/regular/city/img%20(4).jpg')
+                a(href='#')
+                  .mask
+              // Title
+              .card-block
+                h4.card-title Card Title
+                hr
+                // Body
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+            style.
+              .view.overlay {
+              overflow: auto;
+              }
+          .col-md-4
+            .card.wow.animated.fadeInUp
+              // Image
+              .view.overlay.hm-white-slight
+                img.img-fluid(src='http://mdbootstrap.com/images/regular/city/img%20(8).jpg')
+                a(href='#')
+                  .mask
+              // Title
+              .card-block
+                h4.card-title Card Title
+                hr
+                // Body
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+            style.
+              .view.overlay {
+              overflow: auto;
+              }
+    #footer
+      footer.page-footer.elegant-color.center-on-small-only
+        .container
+          .row
+            .col-md-6
+              h5.title MindHive LLC
+              p Bringing talent to the masses
+            .col-md-6
+              h5.title Links
+              ul
+                li
+                  a(href='#!') Link 1
+                li
+                  a(href='#!') Link 2
+                li
+                  a(href='#!') Link 3
+                li
+                  a(href='#!') Link 4
+        .footer-copyright
+          .container-fluid
+            p
+              | © 
+              span#copyyear 2016
+              | , MindHive LLC
+      script(src='js/jquery-2.2.3.min.js')
+      script(src='js/tether.min.js')
+      script(src='js/bootstrap.min.js')
+      script(src='js/mdb.min.js')
+      // Copyright Script
+      script.
+        $(document).ready(function () {
+        var curYear = (new Date().getFullYear());
+        var tag = $('#copyyear').innerHTML;
+        if (tag < curYear) {
+        tag.innerHTML = tag+"-"+curYear;
+        }
+        });
+      // Google Analytics
+      script.
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create', 'UA-78698882-1', 'auto'); ga('send', 'pageview');
+
