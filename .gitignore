@@ -21,3 +21,4 @@ tmp
 .*.tmo
 .*.tmp
 
+.sass-cache
