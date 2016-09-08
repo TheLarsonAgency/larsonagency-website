@@ -109,6 +109,7 @@ server.register([Vision, Inert], function(err) {
           lastname: req.payload.last,
           email: req.payload.email,
           description: req.payload.msg,
+          source: "LarsonAgency",
         }).then(function(prospect) {
           return res({ status: 'ok', errors: [], result: {}});
         });

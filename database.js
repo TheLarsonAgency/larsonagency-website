@@ -19,7 +19,8 @@ var Prospect = sqlz.define('prospect', {
   firstname: Sequelize.STRING,
   lastname: Sequelize.STRING,
   email: Sequelize.STRING,
-  description: Sequelize.TEXT
+  description: Sequelize.TEXT,
+  source: Sequelize.STRING
 }, {
   freezeTableName: true
 });

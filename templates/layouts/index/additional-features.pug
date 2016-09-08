@@ -2,25 +2,46 @@ include ../../mixins/module.pug
 include ../../mixins/list.pug
 
 // Additional Features
-+modulesection("Services")(class="wow fadeInDown", id='services')
++modulesection()(class="wow fadeInDown")
   .row
 
-    .col-md-6
+    .col-md-4
 
-      +piccardhead('#', '/img/col/city/img%20(12).jpg')(class='wow fadeIn')
+      +piccardhead('#', '/img/col/city/img%20(12).jpg')(class='wow fadeInLeft')
         +listgroup()
-          +checklistitem("Full stack development")
-          +checklistitem("Mobile development")
-          +checklistitem("Web development")
-          +checklistitem("Backend development")
-          +checklistitem("Database development")
+          +checklistitem("Robotics")
+          +checklistitem("Automation")
+          +checklistitem("Artificial Intelligence")
+          +checklistitem("IoT and Embedded Development")
+          +checklistitem("Full-stack Development")
+          +checklistitem("GPU development")
+          +checklistitem("Scalable Cloud Processing")
 
-    .col-md-6
+    .col-md-4
 
-      +piccardhead('#', '/img/col/city/img%20(14).jpg')(class='wow fadeIn', data-wow-delay='0.3s')
+      +piccardhead('#', '/img/col/city/img%20(14).jpg')(class='wow fadeInRight')
         +listgroup()
-          +checklistitem("Continuous integration")
-          +checklistitem("Scalable hosting")
-          +checklistitem("Cloud services")
-          +checklistitem("Domain management")
-          +checklistitem("Full integrations")
+          +checklistitem("Microservices")
+          +checklistitem("Service-Oriented Architectures")
+          +checklistitem("Cloud Architectures")
+          +checklistitem("Containers and Virtualization")
+          +checklistitem("Hosted Code Repositories")
+          +checklistitem("Continuous Integration")
+          +checklistitem("Scalable Architectures")
+
+    .col-md-4
+
+      +piccardhead('#', '/img/col/city/img%20(14).jpg')(class='wow fadeInRight')
+        +listgroup()
+          +checklistitem("Penetration Testing")
+          +checklistitem("Security Research")
+          +checklistitem("Security Audits")
+          +checklistitem("Hardening")
+          +checklistitem("Embedded and IoT Security")
+          +checklistitem("Anomaly Detection")
+          +checklistitem("Forensics Analysis")
+
+  br
+  br
+  br
+  br

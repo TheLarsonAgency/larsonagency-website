@@ -1,0 +1,28 @@
+include ../../mixins/paragraph.pug
+include ../../mixins/card.pug
+include ../../mixins/form.pug
+
+// Full Pic Background
+.view.hm-black-strong
+  .full-bg-img.flex-center
+
+    .container
+      #home.row
+
+        // First column
+        .col-lg-6
+          .description.smooth-scroll
+            +paragraph("Still on the fence?")(class="wow fadeInLeft")
+              h5.wow.fadeInLeft(data-wow-delay='0.4s')
+                | Reach out to someone today
+              p.wow.fadeInLeft(data-wow-delay='0.7s')
+                | Discuss your ideas with one of our specialists! We'll provide
+                | customized advice based on the stage of your project and what
+                | it needs to be successful.
+
+        // Second column
+        .col-lg-6
+          // Form
+          +basiccard()(class="wow fadeInRight")
+            // Body
+            +contactform("Let's Talk", "About Your Project", "Tell Us About Your Project Today")

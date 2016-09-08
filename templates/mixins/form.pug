@@ -45,14 +45,14 @@ mixin subscribeform()
         input#checkbox1(type='checkbox')
         label(for='checkbox1') Subscribe me to the newsletter
 
-mixin contactform()
+mixin contactform(title, subtitle, clicktext)
   // Header
 
   .text-xs-center
     //- h3 Contact us:
-    h3.display-4 Let's start
+    h3.display-4= title
     h3
-      small.text-muted a new project together
+      small.text-muted= subtitle
 
   hr
 
@@ -80,7 +80,7 @@ mixin contactform()
       label.lead(for='msg') Your idea in a few words...
 
     .text-xs-center
-      button.btn.btn-warning.btn-lg(type='button', data-toggle='modal', data-target='#contact', onclick="goog_report_conversion(window.location.href)") Get a free quote
+      button.btn.btn-warning.btn-lg(type='button', data-toggle='modal', data-target='#contact', onclick="goog_report_conversion(window.location.href)")= clicktext
 
     #contact.modal.fade(tabindex='-1', role='dialog', aria-labelledby='ContactLabel', aria-hidden='true')
       .modal-dialog(role='document')

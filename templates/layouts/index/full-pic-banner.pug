@@ -11,12 +11,16 @@ include ../../mixins/form.pug
 
         // First column
         .col-lg-6
-          .description
-            +paragraph("MindHive")(class="wow fadeInLeft")
+          .description.smooth-scroll
+            +paragraph("The Larson Agency, LLC")(class="wow fadeInLeft")
               h5.wow.fadeInLeft(data-wow-delay='0.4s')
-                | Bringing Talent to the Masses
+                | Development & Engineering Services
               p.wow.fadeInLeft(data-wow-delay='0.7s')
-                | A forward-thinking software services firm that will bring your visions to life.
+                | A forward-thinking firm&mdash;specializing in Robotics,
+                | Artificial Intelligence, cloud architectures, the Internet of
+                | Things, and the security of all such things&mdash;we will
+                | help you bring your visions to life and securely connect them
+                | with the world.
               br
               a.btn.btn-ptc.wow.fadeInLeft(href='#about', data-wow-delay='0.7s') Learn more
 
@@ -25,5 +29,4 @@ include ../../mixins/form.pug
           // Form
           +basiccard()(class="wow fadeInRight")
             // Body
-            +contactform()
-            //- +subscribe()
+            +contactform("Let's Start", "A New Project", "Get a Free Quote")

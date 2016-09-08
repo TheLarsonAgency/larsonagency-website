@@ -1,18 +1,32 @@
 include ../../mixins/module.pug
 include ../../mixins/card.pug
+include ../../mixins/paragraph.pug
 
 // Main Container
-+modulesection("About Us")(class="wow fadeInDown", id="about")
++modulesection("What We Do")(class="wow fadeInDown", id="services")
   .row
-    .col-md-4
-      +piccard("Instant Talent", '#', '/img/col/city/img%20(2).jpg')(class="wow fadeInUp")
-        p.card-text We've taken the time and done the research on finding the best candidates so that you don't have to.
 
-    .col-md-4
-      +piccard("Next Step", '#', '/img/col/city/img%20(8).jpg')(class="wow fadeInUp", data-wow-delay='0.4s')
-        p.card-text Leave the resumes to your competitors as you move to the next step without having to worry about how it will get done.
+    .col-md-3(class="wow fadeInUp")
+      +piccard("Artificial Intelligence", '#', '/img/col/city/img%20(8).jpg')(class="wow fadeInUp", data-wow-delay='0.4s')
+        p.card-text
+          | Enact domain logic on the nuggets of wisdom hidden away in
+          | unstructured data.
 
-    .col-md-4
-      +piccard("Innovation", '#', '/img/col/city/img%20(4).jpg')(class="wow fadeInUp", data-wow-delay='0.2s')
-        p.card-text Without the need for a hiring team, you can sit back and let us do the heavy lifting.  Where do you want to go next?
+    .col-md-3(class="wow fadeInUp", data-wow-delay='0.2s')
+      +piccard("Robotics", '#', '/img/col/city/img%20(2).jpg')(class="wow fadeInUp")
+        p.card-text
+          | Let us help you design and build a prototype for your next big
+          | venture.
+
+    .col-md-3(class="wow fadeInUp", data-wow-delay='0.4s')
+      +piccard("Internet of Things", '#', '/img/col/city/img%20(4).jpg')(class="wow fadeInUp", data-wow-delay='0.2s')
+        p.card-text
+          | Bring <i>things</i> to life and connect them in ways that you never
+          | thought possible.
+
+    .col-md-3(class="wow fadeInUp", data-wow-delay='0.6s')
+      +piccard("Security", '#', '/img/col/city/img%20(4).jpg')(class="wow fadeInUp", data-wow-delay='0.2s')
+        p.card-text
+          | Monitor, analyze, secure, find the faults, or stage the threats of
+          | any application.
 
