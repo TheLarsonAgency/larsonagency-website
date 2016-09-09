@@ -7,7 +7,7 @@
 docker push 656288215726.dkr.ecr.us-east-1.amazonaws.com/larsonagency-website:latest
 
 # Find the task ID
-task_id="$(aws ecs list-tasks --region us-east-1 --cluster MindHive | grep -A1 taskArns | tail -1 | sed 's/"//g' | cut -d'/' -f2)"
+task_id="$(aws ecs list-tasks --region us-east-1 --service-name larsonagency-website --cluster MindHive | grep -A1 taskArns | tail -1 | sed 's/"//g' | cut -d'/' -f2 | cut -d',' -f1)"
 
 # Restart AWS
-aws ecs stop-task --region us-east-1 --cluster MindHive --task $task_id
+[ "$task_id" != "" ] && aws ecs stop-task --region us-east-1 --cluster MindHive --task $task_id
