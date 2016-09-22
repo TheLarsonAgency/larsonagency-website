@@ -1,22 +1,39 @@
 include ../../mixins/module.pug
 include ../../mixins/card.pug
+include ../../mixins/list.pug
 include ../../mixins/paragraph.pug
 
 // Main Container
 +modulesection("About")(class="wow fadeInDown", id="about")
   .row
-    .col-md-12(class="wow fadeIn")
-      +lightparagraph("The Larson Agency, LLC")
-        p
-          | The Larson Agency, LLC (this site) is focused on the creation of
-          | open source projects and tools that support the consultancy of
-          | Bobby Larson.
-          //- | You can find us on GitHub 
-            a(href="https://github.com/TheLarsonAgency") here.
+    .col-md-2(class="wow fadeIn")
+    .col-md-8(class="wow fadeIn")
+      +basiccard()
+        +lightparagraph("The Larson Agency, LLC")
+          p
+            | Bobby manifests and delivers his services through 
+            | The Larson Agency.  Bobby can currently be hired for
+            | the following services:
+            //- | You can find us on GitHub 
+              a(href="https://github.com/TheLarsonAgency") here.
+        +listgroup()
+          +checklistitem("Guest speaker at conferences and events")
+          +checklistitem("Consult on implementations and best practices")
+          +checklistitem("Architect solutions to suit business needs")
+          +checklistitem("Build solutions from the ground up")
         br
         p
-          | Here are some of Bobby's other endeavors:
-        br
+          | &nbsp;
+          | &nbsp;
+          a.btn.btn-success <strong>Contact Bobby</strong>
+          | for more information.
+
+      br
+      br
+      p.lead
+        | Some of Bobby's other endeavors include:
+      br
+    .col-md-2(class="wow fadeIn")
   .row
 
     .col-md-4(class="wow fadeInUp")
@@ -24,14 +41,14 @@ include ../../mixins/paragraph.pug
         p.card-text
           | Bobby's blog&mdash;This is where Bobby discusses his various endeavors,
           | experiments, and views on science and technology.
-        a(href="http://mynameismana.com") My Name Is Mana
+        a(href="http://mynameismana.com") MyNameIsMana
 
     .col-md-4(class="wow fadeInUp", data-wow-delay='0.2s')
       +piccard("RobotStudio", 'http://robot.studio', '/images/robot%20studio-winner-final.jpg')(class="wow fadeInUp")
         p.card-text
-          | RobotStudio is a startup focused on building on the latest tools
-          | to support the creation of robotics, artificial intelligence,
-          | data science, and the Internet of Things.
+          | RobotStudio is a startup focused on building the latest tools
+          | and community to support the creation of robotics, artificial
+          | intelligence, data science, and the Internet of Things.
         a(href="http://robot.studio") RobotStudio
 
     //- .col-md-3(class="wow fadeInUp", data-wow-delay='0.4s')
@@ -44,7 +61,9 @@ include ../../mixins/paragraph.pug
     .col-md-4(class="wow fadeInUp", data-wow-delay='0.6s')
       +piccard("Social", 'http://bobby.social', '/images/8197548940_5500bfb2a9_k.jpg')(class="wow fadeInUp", data-wow-delay='0.2s')
         p.card-text
-          | Bobby has several social profiles, including LinkedIn, Google+, and
-          | he is the creator behind the "Robot Builders" Google Group.
+          | Bobby is heavily involved in the community, and has several
+          | social profiles, including GitHub, LinkedIn,
+          | Google+, and he is the creator behind the "Robot Builders"
+          | Google Group.
         a(href="http://bobby.social") Connect With Bobby
 
