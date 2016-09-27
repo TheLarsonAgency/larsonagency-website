@@ -8,8 +8,8 @@ var apikey = process.env.SENDGRID_API_KEY;
 var sg = SendGrid.SendGrid(apikey);
 
 var templates = {
-  greeting: "0297b1a6-d052-42d5-a996-0585fbddf8fc",
-  prospect: "064e3479-ebcb-4579-baa3-14e0f551c414",
+  greeting: "d825b4d2-fd0a-44f4-9b81-8bc26f1d0422",
+  prospect: "ce119d3e-3a97-4649-a5bb-a0c353324224"
 };
 
 
